@@ -196,8 +196,10 @@ main.container {
           height: 20px; }
 
 .mainside {
+  background-color: #f3f1f1;
   border-right: 1px solid rgba(0, 0, 0, 0.1); }
   .mainside .mainside-header {
+    cursor: pointer;
     position: sticky;
     top: 0;
     padding: 5px 15px;
@@ -222,6 +224,200 @@ main.container {
       .mainside .mainside-header a svg {
         width: 24px;
         fill: #1da1f2; }
+  .mainside .mainside-form {
+    background-color: #fff;
+    display: flex;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; }
+    .mainside .mainside-form > a img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%; }
+    .mainside .mainside-form .post {
+      flex: 1;
+      margin-left: 10px; }
+      .mainside .mainside-form .post textarea {
+        width: 100%;
+        resize: none;
+        min-height: 50px;
+        max-height: 80px;
+        outline: none;
+        padding-left: 20px;
+        padding-top: 12px;
+        overflow: hidden;
+        border: none;
+        font-size: 20px; }
+        .mainside .mainside-form .post textarea::-moz-placeholder {
+          font-size: 20px;
+          font-weight: 400;
+          color: rgba(15, 20, 25, 0.6); }
+        .mainside .mainside-form .post textarea:-ms-input-placeholder {
+          font-size: 20px;
+          font-weight: 400;
+          color: rgba(15, 20, 25, 0.6); }
+        .mainside .mainside-form .post textarea::placeholder {
+          font-size: 20px;
+          font-weight: 400;
+          color: rgba(15, 20, 25, 0.6); }
+      .mainside .mainside-form .post .mainside-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .mainside .mainside-form .post .mainside-icons .inner {
+          display: flex;
+          align-items: center;
+          padding-left: 13px; }
+          .mainside .mainside-form .post .mainside-icons .inner input[type="file"] {
+            display: none; }
+          .mainside .mainside-form .post .mainside-icons .inner label {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .mainside .mainside-form .post .mainside-icons .inner label:hover {
+              background-color: #e6f3fc; }
+            .mainside .mainside-form .post .mainside-icons .inner label svg {
+              width: 22.5px;
+              height: 22.5px;
+              fill: #1da1f2; }
+          .mainside .mainside-form .post .mainside-icons .inner a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .mainside .mainside-form .post .mainside-icons .inner a:hover {
+              background-color: #e6f3fc; }
+            .mainside .mainside-form .post .mainside-icons .inner a svg {
+              width: 22.5px;
+              height: 22.5px;
+              fill: #1da1f2; }
+        .mainside .mainside-form .post .mainside-icons > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #8ed0f8;
+          color: white;
+          width: 74px;
+          height: 40px;
+          border-radius: 40px;
+          cursor: default; }
+  .mainside .mainside-posts {
+    background-color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 5px 20px 5px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .mainside .mainside-posts:hover {
+      background-color: #f7f9fa; }
+    .mainside .mainside-posts .user a {
+      display: flex;
+      padding-top: 10px; }
+      .mainside .mainside-posts .user a img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%; }
+    .mainside .mainside-posts .post-details {
+      flex: 1;
+      margin-left: 10px; }
+      .mainside .mainside-posts .post-details .user-info {
+        display: flex;
+        flex-direction: column; }
+        .mainside .mainside-posts .post-details .user-info .username {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(1) {
+            display: flex;
+            align-items: center; }
+            .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(1) h3 {
+              color: #0f1419;
+              font-size: 15px;
+              font-weight: 700;
+              margin-right: 5px;
+              display: flex;
+              align-items: center; }
+              .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(1) h3:hover {
+                text-decoration: underline; }
+              .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(1) h3 > span {
+                display: flex;
+                margin-left: 5px; }
+                .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(1) h3 > span svg {
+                  width: 16.41px;
+                  height: 16.41px;
+                  fill: #1da1f2; }
+            .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(1) > span {
+              font-size: 15px;
+              color: #5b7083;
+              margin-right: 5px; }
+          .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(2) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%; }
+            .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(2):hover {
+              background-color: #e6f3fc; }
+            .mainside .mainside-posts .post-details .user-info .username a:nth-of-type(2) svg {
+              width: 18.75px;
+              height: 18.75px; }
+        .mainside .mainside-posts .post-details .user-info .user-post-content p {
+          font-size: 15px;
+          color: #0f1419;
+          margin-bottom: 4px; }
+          .mainside .mainside-posts .post-details .user-info .user-post-content p a {
+            color: #1da1f2; }
+            .mainside .mainside-posts .post-details .user-info .user-post-content p a:hover {
+              text-decoration: underline; }
+        .mainside .mainside-posts .post-details .user-info .user-post-content img {
+          width: 100%;
+          border-radius: 10px;
+          margin-top: 10px; }
+      .mainside .mainside-posts .post-details .post-icons ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .mainside .mainside-posts .post-details .post-icons ul li {
+          display: flex;
+          align-items: center; }
+          .mainside .mainside-posts .post-details .post-icons ul li:hover a {
+            background-color: #e6f3fc; }
+          .mainside .mainside-posts .post-details .post-icons ul li:nth-of-type(1):hover a svg {
+            fill: #1da1f2; }
+          .mainside .mainside-posts .post-details .post-icons ul li:nth-of-type(1):hover span {
+            color: #1da1f2; }
+          .mainside .mainside-posts .post-details .post-icons ul li:nth-of-type(2):hover a svg {
+            fill: green; }
+          .mainside .mainside-posts .post-details .post-icons ul li:nth-of-type(2):hover span {
+            color: green; }
+          .mainside .mainside-posts .post-details .post-icons ul li:nth-of-type(3):hover a svg {
+            fill: crimson; }
+          .mainside .mainside-posts .post-details .post-icons ul li:nth-of-type(3):hover span {
+            color: crimson; }
+          .mainside .mainside-posts .post-details .post-icons ul li:nth-of-type(4):hover a svg {
+            fill: #1da1f2; }
+          .mainside .mainside-posts .post-details .post-icons ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 5px; }
+            .mainside .mainside-posts .post-details .post-icons ul li a svg {
+              width: 18px;
+              fill: #5b7083; }
+          .mainside .mainside-posts .post-details .post-icons ul li span {
+            font-size: 12px;
+            color: #5b7083; }
 
 .rightside {
   border-right: 1px solid rgba(0, 0, 0, 0.1); }

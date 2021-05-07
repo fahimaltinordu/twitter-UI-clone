@@ -252,8 +252,10 @@
    }
  }
  .mainside {
+    background-color: rgb(243, 241, 241);
     border-right:1px solid rgba($color: #000000, $alpha: 0.1);
     .mainside-header {
+       cursor: pointer;
        position: sticky;
        top:0;
        padding:5px 15px;
@@ -280,6 +282,278 @@
           svg {
              width:24px;
              fill:$mainblue;
+          }
+       }
+    }
+    .mainside-form {
+       background-color: #fff;
+       display: flex;
+       padding:10px 15px;
+       border-bottom:1px solid rgba($color: #000000, $alpha: 0.1);
+       margin-bottom:15px;
+       >a {
+         img {
+            width:48px;
+            height:48px;
+            border-radius: 50%;
+         }
+       }
+       .post {
+          flex:1;
+          margin-left:10px;
+          textarea {
+             width:100%;
+             resize: none;
+             min-height:50px;
+             max-height: 80px;
+             outline: none;
+             padding-left:20px;
+             padding-top:12px;
+             overflow:hidden;
+             border:none;
+             font-size: 20px;
+             &::placeholder {
+               font-size: 20px;
+               font-weight: 400;
+               color: rgba($color: $fontcolor, $alpha: 0.6);
+             }
+          }
+          .mainside-icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .inner {
+               display: flex;
+               align-items: center;
+               padding-left:13px;
+
+                input[type="file"] {
+                   display: none;
+                }
+                label {
+                   cursor: pointer;
+                   width:40px;
+                   height: 40px;
+                   border-radius: 50%;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   &:hover {
+                      background-color: $hovercolor;
+                   }
+                   svg {
+                      width:22.5px;
+                      height:22.5px;
+                      fill:$mainblue;
+                   }
+                }
+                a {
+                  width:40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  &:hover {
+                     background-color: $hovercolor;
+                  }
+                   svg {
+                     width:22.5px;
+                     height:22.5px;
+                     fill:$mainblue;
+                   }
+                }
+            }
+            >a {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background-color: $passiveblue;
+               color: white;
+               width: 74px;
+               height: 40px;
+               border-radius: 40px;
+               cursor:default;
+            }
+          }
+       }
+    }
+    .mainside-posts {
+       background-color: #fff;
+       display: flex;
+       align-items: flex-start;
+       justify-content: space-between;
+       cursor: pointer;
+       padding: 5px 20px 5px 20px;
+       border-bottom:1px solid rgba($color: #000000, $alpha: 0.1);
+       &:hover {
+          background-color: $bodygray;
+       }
+       .user {
+          a {
+             display: flex;
+             padding-top: 10px;
+            img {
+               width:48px;
+               height:48px;
+               border-radius: 50%;
+             }
+          }
+       }
+       .post-details {
+          flex:1;
+          margin-left:10px;
+          .user-info {
+            display: flex;
+            flex-direction: column;
+            .username {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               a {
+                  &:nth-of-type(1) {
+                     display: flex;
+                     align-items: center;
+                     h3 {
+                        color: $fontcolor;
+                        font-size: 15px;
+                        font-weight: 700;
+                        margin-right: 5px;
+                        display: flex;
+                        align-items: center;
+                        &:hover {
+                           text-decoration: underline;
+                        }
+                        > span {
+                           display: flex;
+                           margin-left:5px;
+                           svg {
+                              width:16.41px;
+                              height: 16.41px;
+                              fill:$mainblue;
+                           }
+                        }
+                     }
+                     >span {
+                        font-size: 15px;
+                        color:rgb(91, 112, 131);
+                        margin-right: 5px;
+                     }
+                  }
+                  &:nth-of-type(2) {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 35px;
+                      height: 35px;
+                      border-radius: 50%;
+                      &:hover {
+                         background-color: $hovercolor;
+                      }
+                     svg {
+                        width:18.75px;
+                        height: 18.75px;
+                     }
+                  }
+               }
+            }
+            .user-post-content {
+               p{
+                  font-size: 15px;
+                  color: $fontcolor;
+                  margin-bottom: 4px;
+                  a {
+                     color: $mainblue;
+                     &:hover {
+                        text-decoration: underline;
+                     }
+                  }
+               }
+               img {
+                  width:100%;
+                  border-radius: 10px;
+                  margin-top:10px;
+               }
+            }
+          }
+          .post-icons {
+             ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                li {
+                  display: flex;
+                  align-items: center;
+                  &:hover {
+                     a {
+                        background-color: $hovercolor;
+                     }
+                  }
+                  &:nth-of-type(1) {
+                     &:hover {
+                        a {
+                           svg {
+                              fill: $mainblue;
+                           }
+                        }
+                        span {
+                           color:$mainblue;
+                        }
+                     }
+                  }
+                  &:nth-of-type(2) {
+                     &:hover {
+                        a {
+                           svg {
+                              fill: green;
+                           }
+                        }
+                        span {
+                           color:green;
+                        }
+                     }
+                  }
+                  &:nth-of-type(3) {
+                     &:hover {
+                        a {
+                           svg {
+                              fill: crimson;
+                           }
+                        }
+                        span {
+                           color:crimson;
+                        }
+                     }
+                  }
+                  &:nth-of-type(4) {
+                     &:hover {
+                        a {
+                           svg {
+                              fill: $mainblue;
+                           }
+                        }
+                     }
+                  }
+                  
+                   a {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 35px;
+                      height: 35px;
+                      border-radius: 50%;
+                      margin-right:5px;
+                     svg {
+                        width:18px;
+                        fill:rgb(91, 112, 131);
+                     }
+                   }
+                   span {
+                      font-size: 12px;
+                      color:rgb(91, 112, 131);
+                   }
+                }
+             }
           }
        }
     }
