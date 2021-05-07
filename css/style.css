@@ -157,6 +157,10 @@ main.container {
             fill: #1da1f2; }
           .leftside-inner .menu ul li:hover a span {
             color: #1da1f2; }
+        .leftside-inner .menu ul li.menu-active a svg {
+          fill: #1da1f2; }
+        .leftside-inner .menu ul li.menu-active a span {
+          color: #1da1f2; }
     .leftside-inner .user {
       margin-bottom: 10px; }
       @media screen and (max-width: 1200px) {
@@ -200,3 +204,91 @@ main.container {
   @media screen and (max-width: 992px) {
     .rightside {
       display: none; } }
+  .rightside-inner {
+    margin-top: 10px;
+    position: sticky;
+    top: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto; }
+    .rightside-inner .input {
+      margin-bottom: 15px;
+      width: 100%;
+      height: 50px;
+      position: relative; }
+      .rightside-inner .input input {
+        width: 100%;
+        height: 100%;
+        outline: 0;
+        border: 1px solid #ebeef0;
+        background-color: #ebeef0;
+        border-radius: 40px;
+        padding-left: 50px; }
+        .rightside-inner .input input::-moz-placeholder {
+          font-size: 16px;
+          color: gray; }
+        .rightside-inner .input input:-ms-input-placeholder {
+          font-size: 16px;
+          color: gray; }
+        .rightside-inner .input input::placeholder {
+          font-size: 16px;
+          color: gray; }
+        .rightside-inner .input input:focus {
+          border-color: #1da1f2;
+          background-color: #fff; }
+          .rightside-inner .input input:focus + svg {
+            fill: #1da1f2; }
+      .rightside-inner .input svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        height: 20px;
+        fill: gray; }
+
+.messages-chat {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 25px;
+  border-radius: 18px 18px 0 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 300px;
+  height: 50px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4); }
+  @media screen and (min-width: 1000px) {
+    .messages-chat {
+      right: 80px; } }
+  @media screen and (max-width: 768px) {
+    .messages-chat {
+      display: none; } }
+  .messages-chat > section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer; }
+    .messages-chat > section span {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1da1f2; }
+    .messages-chat > section .messages-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .messages-chat > section .messages-icons a {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center; }
+        .messages-chat > section .messages-icons a:hover {
+          background-color: #e6f3fc; }
+        .messages-chat > section .messages-icons a svg {
+          fill: #1da1f2;
+          width: 20px; }

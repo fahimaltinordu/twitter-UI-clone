@@ -2,6 +2,7 @@
  $passiveblue: #8ed0f8;
  $hovercolor:#e6f3fc;
  $fontcolor:rgb(15, 20, 25);
+ $inputgray:#ebeef0;
  
  * {
     margin:0;
@@ -188,6 +189,16 @@
                     }
                  }
               }
+              &.menu-active {
+               a {
+                  svg {
+                     fill:$mainblue;
+                  }
+                  span {
+                     color:$mainblue;
+                  }
+               }
+              }
             }
          }
       }
@@ -249,4 +260,104 @@
     @media screen and (max-width:992px) {
       display: none;
    }
- } 
+   &-inner {
+      margin-top:10px;
+      position: sticky;
+      top: 10px;
+      width:95%;
+      margin-left:auto;
+      margin-right:auto;
+      .input {
+         margin-bottom:15px;
+         width:100%;
+         height:50px;
+         position: relative;
+         input {
+            width:100%;
+            height:100%;
+            outline:0;
+            border:1px solid $inputgray;
+            background-color: $inputgray;
+            border-radius: 40px;
+            padding-left:50px;
+            &::placeholder {
+               font-size: 16px;
+               color:gray;
+            }
+            &:focus {
+               border-color: $mainblue;
+               background-color: #fff;
+               + svg {
+                  fill:$mainblue;
+               }
+            }
+         }
+         svg {
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            left:20px;
+            height:20px;
+            fill:gray;
+         }
+      }
+      .trend {
+
+      }
+   }
+ }
+ 
+ .messages-chat {
+   background-color: #fff;
+   position: fixed;
+   bottom:0;
+   right:25px;
+   border-radius: 18px 18px 0 0;
+   margin-left:auto;
+   margin-right:auto;
+   display:flex;
+   align-items: center;
+   padding:10px;
+   width:300px;
+   height:50px;
+   box-shadow:0 0 4px 2px rgba($color: #000000, $alpha: 0.4);
+   @media screen and (min-width:1000px) {
+      right:80px;
+   }
+   @media screen and (max-width:768px) {
+      display: none;
+   }
+   >section {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      width:100%;
+      cursor:pointer;
+      span {
+         font-size: 14px;
+         font-weight: 700;
+         color:$mainblue;
+      }
+      .messages-icons {
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         a {
+            display:flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+               background-color: $hovercolor;
+            }
+            svg {
+               fill:$mainblue;
+               width:20px;
+            }
+         }
+      }
+   }
+
+}
