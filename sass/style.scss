@@ -252,9 +252,37 @@
    }
  }
  .mainside {
-   //  height:1500px;
     border-right:1px solid rgba($color: #000000, $alpha: 0.1);
-   padding:15px;
+    .mainside-header {
+       position: sticky;
+       top:0;
+       padding:5px 15px;
+       background-color: #fff;
+       z-index: 100;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       border-bottom:1px solid rgba($color: #000000, $alpha: 0.1);
+       h2 {
+         font-weight: 700;
+         font-size: 18px;
+       }
+       a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          &:hover {
+             background-color: $hovercolor;
+          }
+          svg {
+             width:24px;
+             fill:$mainblue;
+          }
+       }
+    }
  } 
  .rightside {
    border-right:1px solid rgba($color: #000000, $alpha: 0.1);
