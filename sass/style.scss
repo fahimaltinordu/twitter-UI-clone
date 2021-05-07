@@ -20,210 +20,233 @@
     max-width:1240px;
     margin-left:auto;
     margin-right:auto;
-    border:2px solid $mainblue;
     min-height:100vh;
     display: grid;
-    grid-template-columns: 250px 540px 350px;
-    @media screen and (max-width:768px) {
-      grid-template-columns: 80px 1fr 350px;
+    grid-template-columns: 250px minmax(400px, auto) 350px;
+   @media screen and (max-width:1200px) {
+      grid-template-columns: 60px minmax(400px, auto) 350px;;
+   } 
+   @media screen and (max-width:992px) {
+      grid-template-columns: 60px 1fr;
    }
  }
  .leftside {
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media screen and (max-width:768px) {
-      align-items: center;
-    }
-    .logo {
-       margin-bottom:15px;
-       padding-left:15px;
-       @media screen and (max-width:768px) {
-         padding-left:0px; 
+    border-right:1px solid rgba($color: #000000, $alpha: 0.1);
+   &-inner {
+      height:100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      @media screen and (max-width:1200px) {
+        align-items: center;
       }
-       a {
-          width:45px;
-          height:45px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &:hover {
-             background-color: $hovercolor;
-          }
-         svg {
-            fill:$mainblue;
-            width:27px;
-            height:27px;
-         }
-       }
-    }
-    .menu {
-       flex:1;
-       ul {
-         @media screen and (max-width:768px) {
+      .logo {
+         margin-top:5px;
+         margin-bottom:15px;
+         padding-left:15px;
+         @media screen and (max-width:1200px) {
+           padding-left:0px; 
+        }
+         a {
+            width:45px;
+            height:45px;
+            border-radius: 50%;
             display: flex;
-            flex-direction: column;
             align-items: center;
-         }
-         
-          li {
-             padding-left:10px;
-             @media screen and (max-width:768px) {
-               padding-left:0px;
-            }
-             &:not(:nth-of-type(10)) {
-               a {
-                  padding-left:15px;
-                  @media screen and (max-width:768px) {
-                     padding-left:0px;
-                  }
-               }
-             }
-             a {
-                display: flex;
-                align-items: center;
-                height:50px;
-                border-radius: 30px;
-                
-               svg {
-                  width:27px;
-                  height:27px;
-                }
-                span {
-                   color:$fontcolor;
-                   margin-left:20px;
-                   font-size: 18px;
-                   font-weight: 700;
-                   @media screen and (max-width:768px) {
-                      display:none;
-                   }
-                }
-             }
-             &:nth-of-type(10) {
-               padding-left:10px;
-               @media screen and (max-width:768px) {
-                  padding-left:0px;
-               }
-                a {
-                  @media screen and (max-width:768px) {
-                     padding-left:0px;
-                  }
-                   &#writetext {
-                     background-color: $mainblue;
-                     margin-top:10px;
-                     width:200px;
-                     height:44px;
-                     border-radius: 22px;
-                     color:white;
-                     font-size: 14px;
-                     font-weight: 700;
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     @media screen and (max-width:768px) {
-                       display: none;
-                    }
-                     &:hover {
-                        background-color: rgb(25, 137, 206);
-                     }
-                   }
-                   &#writeicon {
-                      display:none;
-                      @media screen and (max-width:768px) {
-                        background-color: $mainblue;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width:46px;
-                        height: 46px;
-                        &:hover {
-                           background-color: rgb(25, 137, 206);
-                        }
-                        svg {
-                           fill:white;
-                        }
-                     }
-                   }
-                }
-             }
-             &#search {
-                display: none;
-                @media screen and (max-width:768px) {
-                   display: block;
-                }
-             }
-             &#explore {
-               @media screen and (max-width:768px) {
-                  display: none;
-               }
-            }
+            justify-content: center;
             &:hover {
+               background-color: $hovercolor;
+            }
+           svg {
+              fill:$mainblue;
+              width:27px;
+              height:27px;
+           }
+         }
+      }
+      .menu {
+         flex:1;
+         ul {
+           @media screen and (max-width:1200px) {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+           }
+           
+            li {
+               padding-left:10px;
+               cursor: pointer;
+               @media screen and (max-width:1200px) {
+                 padding-left:0px;
+              }
+               &:not(:nth-of-type(10)) {
+                 a {
+                    padding-left:15px;
+                    @media screen and (max-width:1200px) {
+                       padding-left:0px;
+                    }
+                 }
+               }
                a {
-                  background-color: $hovercolor;
-                  svg {
-                     fill:$mainblue;
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                  @media screen and (max-width:1200px) {
+                    justify-content: center;
+                    width:50px;
+                    padding-right: initial;
+                 }
+                  width: fit-content;
+                  padding-right: 25px;
+                  height:50px;
+                  border-radius: 30px;
+                  
+                 svg {
+                    width:27px;
+                    height:27px;
                   }
                   span {
-                     color:$mainblue;
+                     color:$fontcolor;
+                     margin-left:20px;
+                     font-size: 18px;
+                     font-weight: 700;
+                     @media screen and (max-width:1200px) {
+                        display:none;
+                     }
                   }
                }
-            }
-          }
-       }
-    }
-    .user {
-       margin-bottom:10px;
-       @media screen and (max-width:768px) {
-         a {
-            .h-wrapper, svg {
-               display:none;
+               &:nth-of-type(10) {
+                 padding-left:10px;
+                 @media screen and (max-width:1200px) {
+                    padding-left:0px;
+                 }
+                  a {
+                     padding-right: 0;
+                    @media screen and (max-width:1200px) {
+                       padding-left:0px;
+                    }
+                     &#writetext {
+                       background-color: $mainblue;
+                       margin-top:10px;
+                       width:200px;
+                       height:44px;
+                       border-radius: 22px;
+                       color:white;
+                       font-size: 14px;
+                       font-weight: 700;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       @media screen and (max-width:1200px) {
+                         display: none;
+                      }
+                       &:hover {
+                          background-color: rgb(25, 137, 206);
+                       }
+                     }
+                     &#writeicon {
+                        display:none;
+                        @media screen and (max-width:1200px) {
+                          background-color: $mainblue;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          width:46px;
+                          height: 46px;
+                          margin-top:10px;
+                          &:hover {
+                             background-color: rgb(25, 137, 206);
+                          }
+                          svg {
+                             fill:white;
+                          }
+                       }
+                     }
+                  }
+               }
+               &#search {
+                  display: none;
+                  @media screen and (max-width:1200px) {
+                     display: block;
+                  }
+               }
+               &#explore {
+                 @media screen and (max-width:1200px) {
+                    display: none;
+                 }
+              }
+              &:hover {
+                 a {
+                    background-color: $hovercolor;
+                    svg {
+                       fill:$mainblue;
+                    }
+                    span {
+                       color:$mainblue;
+                    }
+                 }
+              }
             }
          }
       }
-       a {
-          display:flex;
-          justify-content: space-between;
-          align-items: center;
-          height:60px;
-          width:98%;
-          border-radius: 30px;
-          padding:0 10px;
-          &:hover {
-             background-color:$hovercolor;
-          }
-          img {
-             width:40px;
-             height:40px;
-             border-radius: 50%;
-
-          }
-          .h-wrapper {
-             flex:1;
-             margin-left:10px;
-             color:$fontcolor;
-             h2 {
-                font-size: 15px;
-                font-weight: 700;
-             }
-             h4 {
-               font-size: 15px;
-               font-weight: 400;
-               opacity:0.5;
+      .user {
+         margin-bottom:10px;
+         @media screen and (max-width:1200px) {
+           a {
+              .h-wrapper, svg {
+                 display:none;
+              }
+           }
+        }
+         a {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            height:60px;
+            width:98%;
+            border-radius: 30px;
+            padding:0 10px;
+            &:hover {
+               background-color:$hovercolor;
             }
-          }
-          svg {
-            width:20px;
-            height:20px;
-          }
-       }
-    }
+            img {
+               width:40px;
+               height:40px;
+               border-radius: 50%;
+  
+            }
+            .h-wrapper {
+               flex:1;
+               margin-left:10px;
+               color:$fontcolor;
+               h2 {
+                  font-size: 15px;
+                  font-weight: 700;
+               }
+               h4 {
+                 font-size: 15px;
+                 font-weight: 400;
+                 opacity:0.5;
+              }
+            }
+            svg {
+              width:20px;
+              height:20px;
+            }
+         }
+      }
+   }
  }
  .mainside {
-    background-color: $mainblue;
+    height:1500px;
+    border-right:1px solid rgba($color: #000000, $alpha: 0.1);
 
  } 
  .rightside {
-    background-color: yellowgreen;
+   border-right:1px solid rgba($color: #000000, $alpha: 0.1);
+    @media screen and (max-width:992px) {
+      display: none;
+   }
  } 
